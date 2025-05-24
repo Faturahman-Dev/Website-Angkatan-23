@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENTURO | Angkatan 23</title>
+    <link rel="preload" href="" as="image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <nav>
+                <div class="logo">VENTU<span style="font-weight: 300;">RO</span></div>
+                <div class="nav-links">
+                    <a href="#momen">Momen</a>
+                    <a href="#kata-kata">Kata-Kata</a>
+                    <a href="#puisi">Puisi</a>
+                    <a href="#timeline">Timeline</a>
+
+                </div>
+
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <!-- Mobile Menu (Hidden by default) -->
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="#momen">Momen</a>
+                    <a href="#kata-kata">Kata-Kata</a>
+                    <a href="#puisi">Puisi</a>
+                    <a href="#timeline">Timeline</a>
+                    <a href="#wall">Dinding Pesan</a>
+                    <a href="#stats">Fakta Seru</a>
+                    <a href="#now">Angkatan Sekarang</a>
+                </div>
+            </nav>
+            <div class="hero">
+                <h1 class="fade-in">Venti, Tres, Aureo</h1>
+                <p class="fade-in">Tentang Kita, Tentang Venturo.</p>
+                <a href="#momen" class="btn btn-outline fade-in">Lihat Masa Lalu</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- <section id="wall">
+        <div class="container">
+            <h2 class="section-title">Dinding Pesan</h2>
+            <div class="message-board">
+                <form id="messageForm">
+                    <input type="text" id="name" placeholder="Nama" required>
+                    <textarea id="message" placeholder="Tulis pesanmu di sini..." required></textarea>
+                    <button type="submit" class="btn">Kirim Pesan</button>
+                </form>
+                <div class="messages" id="messages"></div>
+            </div>
+        </div> -->
+
+    <section id="momen">
+        <div class="container">
+            <h2 class="section-title">Galeri Momen</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/600x600/?graduation" alt="Momen Angkatan">
+                    <div class="overlay">
+                        <h3>Wisuda Bersama</h3>
+                        <p>Hari dimana kita semua menyelesaikan perjuangan ini bersama</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/600x600/?group,students" alt="Momen Angkatan">
+                    <div class="overlay">
+                        <h3>Study Tour</h3>
+                        <p>Petualangan seru kita ke tempat baru</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/600x600/?party,students" alt="Momen Angkatan">
+                    <div class="overlay">
+                        <h3>ICOSA</h3>
+                        <p>Acara Setahun Sekali</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/600x600/?sport,team" alt="Momen Angkatan">
+                    <div class="overlay">
+                        <h3>Competisi Olahraga</h3>
+                        <p>Semangat juang kita di lapangan</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/600x600/?classroom" alt="Momen Angkatan">
+                    <div class="overlay">
+                        <h3>Kelas Terakhir</h3>
+                        <p>Tempat dimana semua cerita dimulai</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/600x600/?camping" alt="Momen Angkatan">
+                    <div class="overlay">
+                        <h3>Kemah Bersama</h3>
+                        <p>Malam di bawah bintang dengan cerita tak terlupakan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="momen">
+        <div class="container">
+            <h2 class="section-title">Galeri Momen</h2>
+            <div class="gallery">
+                <!-- Item gallery sekarang memiliki onclick untuk membuka modal -->
+                <div class="gallery-item" onclick="openGalleryPage('wisuda')">
+                    <img src="https://source.unsplash.com/random/600x600/?graduation" alt="Momen Angkatan">
+                    <div class="overlay">
+                        <h3>Wisuda Bersama</h3>
+                        <p>Hari dimana kita semua menyelesaikan perjuangan ini bersama</p>
+                    </div>
+                </div>
+                <!-- Item gallery lainnya -->
+                <div class="gallery-item" onclick="openGalleryPage('study-tour')">
+                    <img src="https://source.unsplash.com/random/600x600/?group,students" alt="Momen Angkatan">
+                    <div class="overlay">
+                        <h3>Study Tour</h3>
+                        <p>Petualangan seru kita ke tempat baru</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryPage('study-tour')">
+                    <img src="https://source.unsplash.com/random/600x600/?group,students" alt="Momen Angkatan">
+                    <div class="overlay">
+                        <h3>ICOSA</h3>
+                        <p>Acara Satu Tahun Sekali</p>
+                    </div>
+                </div>
+                <!-- ... (item gallery lainnya) ... -->
+            </div>
+
+            <!-- Section Upload Foto -->
+            <div class="upload-section">
+                <h3>Bagikan Momenmu</h3>
+                <p>Upload foto kenangan angkatan yang kamu miliki</p>
+                <form class="upload-form" id="uploadForm">
+                    <div class="upload-area" onclick="document.getElementById('file-input').click()">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Klik untuk upload foto atau drop file di sini</p>
+                        <input type="file" id="file-input" multiple accept="image/*">
+                    </div>
+                    <div class="preview-container" id="previewContainer"></div>
+                    <input type="text" id="photoName" placeholder="Judul foto" required class="photo-name">
+                    <textarea id="photoDesc" placeholder="Deskripsi foto (opsional)" rows="3" class="photo-description"></textarea>
+                    <button type="submit" class="btn">Upload Foto</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="galleryModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content" id="modalContent">
+        </div>
+    </div>
+
+
+    <section id="kata-kata" class="quotes">
+        <div class="container">
+            <h2 class="section-title">Kata-Kata Inspiratif</h2>
+            <div class="quote-container">
+                <div class="quote active">
+                    "Kebersamaan adalah energi yang mengubah mimpi individu menjadi realitas bersama."
+                    <div class="author">- Anonim -</div>
+                </div>
+                <div class="quote">
+                    "Kenangan indah tidak akan pernah pudar, mereka hanya menunggu untuk diingat kembali."
+                    <div class="author">- Anggota Angkatan -</div>
+                </div>
+                <div class="quote">
+                    "Persahabatan sejati adalah ketika kamu bisa berdiam diri bersama seseorang dan tetap merasa
+                    nyaman."
+                    <div class="author">- Anonim -</div>
+                </div>
+                <div class="quote-nav">
+                    <button class="active"></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="puisi">
+        <div class="container">
+            <h2 class="section-title">Puisi Angkatan</h2>
+            <div class="poems">
+                <div class="poem-card">
+                    <h3 class="poem-title">Satu Tujuan</h3>
+                    <div class="poem-author">Oleh: Anggota Angkatan</div>
+                    <div class="poem-content">
+                        Berbeda jalan yang kita tempuh
+                        Namun satu tujuan yang sama
+                        Dalam suka dan duka
+                        Kita tetap bersama
+
+                        Waktu terus berlari
+                        Membawa kita masing-masing
+                        Tapi kenangan ini
+                        Takkan pernah hilang
+                    </div>
+                </div>
+                <div class="poem-card">
+                    <h3 class="poem-title">Untuk Kita</h3>
+                    <div class="poem-author">Oleh: Anggota Angkatan</div>
+                    <div class="poem-content">
+                        Jika suatu saat nanti
+                        Kita bertemu kembali
+                        Bukan sebagai teman sekelas
+                        Tapi sebagai sahabat sejati
+
+                        Yang pernah berjuang bersama
+                        Menghadapi semua rintangan
+                        Dengan tawa dan air mata
+                        Menciptakan ikatan abadi
+                    </div>
+                </div>
+                <div class="poem-card">
+                    <h3 class="poem-title">Jangan Jadi Asing</h3>
+                    <div class="poem-author">Oleh: Tim Rasa Jadi Kata</div>
+                    <div class="poem-content">
+                        Kelak, saat bel sekolah tak lagi memanggil
+                        Dan langkah kita berbelok ke arah yang tak serupa
+                        Jangan biarkan waktu menjadi pagar
+                        Yang menghalang kenangan di balik mata
+
+                        Saat kita tidak lagi menggunakan putih abu-abu
+                        Saat seragam ini hanya menjadi lipatan kenangan
+                        Akankah kita tetap ingat janji di sela tawa
+                        Bahwa persahabatan ini tak akana pudar oleh perpisahan?
+
+                        Di koridor panjang yang menjadi saksi
+                        Tiap langkah kecil menuju dewasa
+                        Di bangku belakang tempat rahasia disimpan
+                        Di halaman luas yang menampung semua mimpi kita.
+
+                        Kita pernah mengeluh tentang ujian yang berat
+                        Mengadu pada buku yang enggan terbuka
+                        Namun tertawa dalam lelah
+                        Karena tahu, esok kita masih bersama.
+
+                        Di kantin yang penuh suara dan antrean
+                        Di bawah pohon tempat kita berbagi angan
+                        Kita berbincang tentang masa depan
+                        Seraya megulur waktu yang tak pernah ingin dipercepat
+
+                        Jangan jadi asing, kawan-kawanku
+                        Meski hari-hari ini akan berupa rupa
+                        Meski dinding-dinding sekolah akan merindukan kita
+                        Jangan biarkan jarak menjadi penghalang cerita.
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline">
+        <div class="container">
+            <h2 class="section-title">Timeline Angkatan</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Tahun 2022</div>
+                        <h3>Pertemuan Pertama</h3>
+                        <p>Hari pertama kita bertemu sebagai satu angkatan. Semua masih canggung dan saling mengenal.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Tahun 2023</div>
+                        <h3>Study Tour Pertama</h3>
+                        <p>Acara besar pertama yang kita selenggarakan bersama. Mulai terlihat kekompakan angkatan.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Tahun 2020</div>
+                        <h3>Masa Pandemi</h3>
+                        <p>Kita harus beradaptasi dengan pembelajaran jarak jauh, tapi tetap menjaga silaturahmi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Tahun 2021</div>
+                        <h3>Kembali Bertemu</h3>
+                        <p>Setelah sekian lama, akhirnya bisa bertemu kembali secara langsung. Kebersamaan terasa lebih
+                            berarti.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Tahun 2022</div>
+                        <h3>Persiapan Kelulusan</h3>
+                        <p>Masa-masa penuh tantangan menyelesaikan semua tugas dan persiapan untuk kelulusan.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Tahun 2023</div>
+                        <h3>Wisuda</h3>
+                        <p>Puncak perjuangan kita. Hari yang penuh kebahagiaan dan sedikit kesedihan untuk berpisah.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">VENTU<span style="font-weight: 300;">RO</span></div>
+            <p>Venti, Tres, Aureo</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/venturo.23/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+            </div>
+            <div class="copyright">
+                &copy;2022-2025 VENTURO.
+                <br>Dibuat dengan cinta oleh: <a href="https://github.com/Faturahman-Dev">Faturahman-dev.</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
